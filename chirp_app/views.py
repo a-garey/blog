@@ -58,5 +58,3 @@ def post(request, id):
 #     return render(request, 'chirp_app/pubs.html')
 
 
-
-
