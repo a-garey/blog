@@ -1,0 +1,121 @@
+
+{% extends 'chirp_app/base.html' %}
+
+{% load static %}
+
+  {% block content %}
+    
+    <!-- Intro Section-->
+    <section class="intro">
+      <div class="container-mine">
+        <div class="row">
+            <div class="container-opacity">
+              <h2 class="h3-title">Mikhail Zhvanetsky on humor</h2>
+              <p class="subtitle">"After losing everything, walking around in the threadbare jacket of a disheveled philosopher, I can say: there's nothing better in life. Humor is life."</p>
+            </div>    
+        </div>
+      </div>
+    </section>
+    <section class="featured-posts no-padding-top">
+      <div class="container">
+        <!-- Post-->
+        {% for obj in object_list%}
+        <div class="row d-flex align-items-stretch">
+        {% if not forloop.first and not forloop.last %}
+          <div class="image col-lg-5"><img src={{ obj.post_photo.url }} alt="snow"></div>
+        {% endif %}
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category">
+                  {% for cat in obj.categories.all %}
+                    <a href="#">{{ cat }}</a>
+                  {% endfor %}
+                  </div>
+                    <a href="post.html">
+                    <h2 class="h4">{{ obj.title }}</h2></a>
+                </header>
+                <p>{{ obj.caption }}</p>
+                <footer class="post-footer d-flex align-items-center">
+                  <!-- <a href="#" class="author d-flex align-items-center flex-wrap"> -->
+                  <div class="date"><i class="icon-clock"></i>{{ obj.created|timesince }} ago</div>
+                </footer>
+              </div>
+            </div>
+          </div>
+
+        {% if forloop.first or forloop.last %}
+          <div class="image col-lg-5"><img src={{ obj.post_photo.url }} alt="snow"></div>
+        {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  
+
+    <!-- Latest Posts -->
+    <section class="latest-posts"> 
+      <div class="container">
+        <header> 
+          <h2>Digital Projects</h2>
+          <!-- <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+        </header>
+        <div class="card-group">
+          <div class="card">
+            <a target="_blank" href="https://rus-skazka.org">
+              <img class="card-img-top" src="{% static 'img/squirrel_icon.png' %}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Skazka: Interactive Russian Textbook</h5>
+              <p class="card-text">Media-based textbook for beginners</p>
+            </div>
+          </div>
+          <div class="card">
+              <a href="#">
+                <img class="card-img-top" src="{% static 'img/apple.svg' %}" alt="Card image cap">
+              </a>
+            <div class="card-body">
+              <h5 class="card-title">Automatic flashcards</h5>
+              <p class="card-text">Users upload a Russian text file, program outputs flascards</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <a href="#">
+              <img class="card-img-top" src="{% static 'img/basket.svg' %}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Food Bank Finder</h5>
+              <p class="card-text">Application for finding nearby food banks and food pantries</p>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </section>
+    <!-- Newsletter Section-->
+    <section class="newsletter no-padding-top">    
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Get Joke of the Week emails</h2>
+            <p class="text-big">Weekly links to the subtitled videos</p>
+          </div>
+          <div class="col-md-8">
+            <div class="form-holder">
+              <form action="." method="POST">
+              {% csrf_token %}
+                <div class="form-group">
+                  <input type="email" name="email" id="email" placeholder="Type your email address">
+                  <button type="submit" class="submit">Sign up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  {% endblock content %}
