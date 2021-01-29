@@ -54,7 +54,10 @@ def blog(request):
 def post(request, id):
     return render(request, 'chirp_app/post.html', {})
 
-# def pubs(request):
-#     return render(request, 'chirp_app/pubs.html')
+def pubs(request):
+    return render(request, 'chirp_app/pubs.html')
+
+def portfolio(request):
+    return render(request, 'chirp_app/portfolio.html')
 
 

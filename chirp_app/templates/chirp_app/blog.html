@@ -3,6 +3,10 @@
 {% load static %}
 
   {% block content %}
+
+  <div class="intro">
+    <h3 class="top">Blog</h3>
+  </div>
     
     <div class="container">
       <div class="row">
@@ -24,10 +28,7 @@
                     <h3 class="h4">{{ post.title }}</h3></a>
                   <p class="text-muted">{{ post.caption }}</p>
                   <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
-                      <div class="avatar"><img src={{ post.author.profile_photo }} alt="..." class="img-fluid"></div>
-                      <div class="title"><span>{{ post.author }}</span></div></a>
-                    <div class="date"><i class="icon-clock"></i>{{ post.created|timesince }} ago</div>
-                    <div class="comments meta-last"><i class="icon-comment"></i>{{ post.comment_count }}</div>
+                    <div class="time"><i class="icon-clock" ></i> {{ post.created|timesince }} ago</div>
                   </footer>
                 </div>
               </div>

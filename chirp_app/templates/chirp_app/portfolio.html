@@ -1,0 +1,47 @@
+{% extends 'chirp_app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="intro">
+        <h3 class="top">Digital Projects</h3>
+    </div>
+
+    <div class="body-content">
+        <div class="container">
+            <div class="card-deck">
+                <div class="card">
+                    <a target="_blank" href="https://rus-skazka.org">
+                        <img class="card-img-top" src="{% static 'img/squirrel_icon.png' %}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a target="_blank" href="https://rus-skazka.org">Skazka: Interactive Russian Textbook</a></h5>
+                        <p class="card-text">Media-based textbook for beginners</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="#">
+                        <img class="card-img-top" src="{% static 'img/apple_icon.png' %}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a target="_blank" href="#">Automatic flashcards</a></h5>
+                        <p class="card-text">Users upload a Russian text file, program outputs flascards</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a target="_blank" href="https://github.com/a-garey/Food_Finder_Plus">
+                        <img class="card-img-top" src="{% static 'img/food.png' %}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><a target="_blank" href="https://github.com/a-garey/Food_Finder_Plus">Food Bank Finder</a></h5>
+                        <p class="card-text">Application for finding nearby food banks and food pantries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

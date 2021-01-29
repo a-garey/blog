@@ -1,12 +1,45 @@
+/* @media (min-width: 576px) and (max-width: 767.98px) {
+    .card-deck .card {
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card-deck .card {
+
+    }
+}
+
+@media (min-width: 992px){
+    .card-deck .card {
+    }
+} */
+
+.card-columns {
+    padding: 64px;
+    margin-top: 42px;
+    padding-top: 0px;
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 .intro {
-    margin-bottom: 30px;
     background-image: url('../img/mosaic.jpg');
     padding: 24px;
+}
+
+.top {
+    padding: 24px;
+    margin-top: 0;
 }
 
 .container-opacity {
@@ -22,16 +55,32 @@ body {
     width: 60%;
 }
 
+.card-deck {
+    margin: 0 -15px;
+    justify-content: space-between;
+}
+
+.card {
+    margin: 20px 0;
+    color: black;
+    padding-top: 20px;
+}
+
+.card a {
+    color: black;
+}
+
+.card a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
 .card-img-top {
-    width: 90%;
-    height: 190px;
+    max-width: 90%;
+    height: 280px;
     margin: auto;
     text-align: center;
     display: flex;
-}
-
-.card-img-top:hover {
-    filter: brightness(1.75);
 }
 
 .footer {
@@ -78,4 +127,45 @@ body {
 .social_footer li i {  width:20px; height:20px; text-align:center; 
 }
 
+.cr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+}
 
+.content {
+    padding: 64px;
+}
+
+.publications {
+    padding: 64px;
+    margin-top: 42px;
+    padding-top: 0;
+    color: black;
+    width: 80%;
+}
+
+.publications a {
+    color: black;
+    text-decoration: none;
+}
+
+.publications a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.time {
+    font-size: small;
+    color: grey;
+}
+
+.body-content {
+    margin-top: 0px;
+    margin-bottom: 36px;
+    margin-top: 42px;
+}
+
+.featured-posts {
+    margin-top: 42px;
+}

@@ -39,7 +39,7 @@
                 <p>{{ obj.caption }}</p>
                 <footer class="post-footer d-flex align-items-center">
                   <!-- <a href="#" class="author d-flex align-items-center flex-wrap"> -->
-                  <div class="date"><i class="icon-clock"></i>{{ obj.created|timesince }} ago</div>
+                  <div class="time"><i class="icon-clock"></i> {{ obj.created|timesince }} ago</div>
                 </footer>
               </div>
             </div>
@@ -55,12 +55,12 @@
   
 
     <!-- Latest Posts -->
-    <section class="latest-posts"> 
+    <!-- <section class="latest-posts"> 
       <div class="container">
         <header> 
-          <h2>Digital Projects</h2>
+          <h2>Digital Projects</h2> -->
           <!-- <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
-        </header>
+        <!-- </header>
         <div class="card-group">
           <div class="card">
             <a target="_blank" href="https://rus-skazka.org">
@@ -73,7 +73,7 @@
           </div>
           <div class="card">
               <a href="#">
-                <img class="card-img-top" src="{% static 'img/apple.svg' %}" alt="Card image cap">
+                <img class="card-img-top" src="{% static 'img/apple_icon.png' %}" alt="Card image cap">
               </a>
             <div class="card-body">
               <h5 class="card-title">Automatic flashcards</h5>
@@ -83,7 +83,7 @@
 
           <div class="card">
             <a href="#">
-              <img class="card-img-top" src="{% static 'img/basket.svg' %}" alt="Card image cap">
+              <img class="card-img-top" src="{% static 'img/food.png' %}" alt="Card image cap">
             </a>
             <div class="card-body">
               <h5 class="card-title">Food Bank Finder</h5>
@@ -94,9 +94,9 @@
 
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Newsletter Section-->
-    <section class="newsletter no-padding-top">    
+    <!-- <section class="newsletter no-padding-top">    
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -116,6 +116,6 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
   {% endblock content %}
